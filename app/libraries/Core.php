@@ -15,12 +15,15 @@ class Core {
         // print_r($this->getUrl());
         $url = $this->getUrl();
 
-        // Look in controllers for first value
-        if (file_exists('../app/controllers/' . ucwords($url[0]) . '.php')) {
-            // if exists, set as controller
-            $this->currentController  = ucwords($url[0]);
-            // unset 0 Index
-            unset($url[0]);
+        // check for first part of url
+        if (isset($url[0])) {
+            // Look in controllers for first value
+            if (file_exists('../app/controllers/' . ucwords($url[0]) . '.php')) {
+                // if exists, set as controller
+                $this->currentController  = ucwords($url[0]);
+                // unset 0 Index
+                unset($url[0]);
+            }
         }
 
         // require the controller

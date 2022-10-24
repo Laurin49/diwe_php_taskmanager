@@ -3,7 +3,7 @@
 const DB_HOST = 'localhost';
 const DB_USER = 'Dirk';
 const DB_PASS = 'Welter56';
-const DB_NAME = 'shareposts';
+const DB_NAME = 'php_taskmanager_db';
 
     // App Root
 define('APPROOT', dirname(dirname(__FILE__)));
